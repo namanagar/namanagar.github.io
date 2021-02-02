@@ -28,7 +28,7 @@ sections.forEach(section => {
   
   // load in our image
   loader.add("image", originalImageSource)
-  loader.add("displacement", "../assets/displacement2.jpg")
+  loader.add("displacement", "./assets/displacement2.jpg")
   loader.load((loader, resources) => {
     // once the image has loaded, now do things
     image = new PIXI.Sprite(resources.image.texture)
