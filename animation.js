@@ -27,8 +27,10 @@ sections.forEach(section => {
   const loader = new PIXI.loaders.Loader()
   
   // load in our image
+  const displacementNumber = Math.floor(Math.random() * 5) + 1
+  console.log(displacementNumber)
   loader.add("image", originalImageSource)
-  loader.add("displacement", "./assets/displacement2.jpg")
+  loader.add("displacement", `./assets/displacement${displacementNumber}.jpg`)
   loader.load((loader, resources) => {
     // once the image has loaded, now do things
     image = new PIXI.Sprite(resources.image.texture)
